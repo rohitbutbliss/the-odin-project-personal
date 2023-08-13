@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add7(number) {
+            return parseInt(number) + 7;
+        }
+
+        function multiply(number_1, number_2) {
+            return parseInt(number_1) * parseInt(number_2);
+        }
+
+        function capitalize(string) {
+            if (string === "" || string === undefined) return "empty or null string";
+            return string.replace(string[0], string[0].toUpperCase());
+        }
+
+        function lastLetter(string) {
+            if (string === "" || string === undefined) return "empty or null string";
+            return string[string.length - 1];
+        }
+
+        console.log(add7(25));
+
+        console.log(multiply(24, 28));
+
+        console.log(capitalize("cOoL"));
+
+        console.log(lastLetter("yaY"));
+    </script>
+</body>
+
+</html>
