@@ -1,5 +1,5 @@
 
-// this function gives us random value chosen by computer
+// this function gives us random value chosen by computer to play a round
 function getComputerChoice() {
     // 1 - rock
     // 2 - paper
@@ -12,7 +12,7 @@ function getComputerChoice() {
 }
 
 
-// this function is used to simulate one round
+// this function is used to simulate one round to return us with the result based on selection provide
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase().trim(); // converting player selection to lowercase & trimming in case extra space is there
     if (!verifyPlayerSelection(playerSelection)) return "You provided wrong value";// if player has provided wrong input, we will return this
@@ -27,14 +27,14 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === "scissors" && computerSelection === "paper") return "You won! Scissors beats Paper";
 }
 
-// this function checks if the value provided by user is correct or not
+// this function checks if the value provided by user is correct or not otherwise we might face issues later
 function verifyPlayerSelection(playerSelection) {
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") return true;
     return false;
 }
 
-// this program gathers both players' selection & calls for the round
+// this program gathers both players' selection & calls for the round to play a round
 function game() {
     const playerSelection = prompt("Please enter your exact choice[case insensitive] (rock or paper or scissors only):");
     const computerSelection = getComputerChoice();
